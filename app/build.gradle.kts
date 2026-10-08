@@ -66,6 +66,12 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.datastore.preferences)
+    // El QR: ZXing lo dibuja; el escáner de Google lo lee con la cámara;
+    // ML Kit lo lee de una imagen (viene dentro de la app: funciona sin descargar nada)
+    implementation(libs.zxing.core)
+    implementation(libs.play.services.code.scanner)
+    implementation(libs.mlkit.barcode.scanning)
+    implementation(libs.kotlinx.coroutines.play.services)
 
     // Hilt (Práctica 9): la librería, el generador de código, y su pieza para ViewModel
     implementation(libs.hilt.android)
